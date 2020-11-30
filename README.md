@@ -56,7 +56,22 @@ Here we can observe that the optimum number of components is 12 <br>
 To simplify the problem, the intraday returns are aggregated as sum and standard deviation for both features (Ret_2 to Ret_120) and target labels (Ret_121 to Ret_180)
 Standard deviation of the interday returns is also considered to see how much the returns vary.
 
-## Modelling and Hyperparameter Tuning
-
-
-
+## Model Building
+After imputing missing values and executing Principle Component Analysis on the numerical data columns, the categorical data was transformed into dummy variable columns using Pandas' get_dummies() feature. <br>
+The data was split into training (70%) and testing (30%) data. <br>
+I tried two different models:
+<ul>
+  <li> <strong>Random Forest Regressor</strong>: For baseline model
+  <li> <strong>Multi Layer Perceptron Regressor (MLPReggresor)</strong>: Since the data involved feature values of different ranges, I thought a Multi Layer Perceptron model will be resistent to those variations 
+</ul>
+Since the problem statement dictates us to predict multiple values, MultiOutputRegressor is used.
+<h5 align="center">y_test (blue) vs. y_pred (orange) for first 500 data points in test data</h5>
+<table>
+  <tr><td><h5 align="center">MLP Regressor</h5></td><td><h5 align="center">Random Forest Regressor</h5></td></tr>
+  <tr><td><img src='https://github.com/chawla201/The-Winton-Stock-Market-Challenge/blob/master/images/mlp_intit1.png' width=500></td><td><img src='https://github.com/chawla201/The-Winton-Stock-Market-Challenge/blob/master/images/rfr_init1.png' width=500></td></tr>
+  <tr><td><img src='https://github.com/chawla201/The-Winton-Stock-Market-Challenge/blob/master/images/mlp_intit2.png' width=500></td><td><img src='https://github.com/chawla201/The-Winton-Stock-Market-Challenge/blob/master/images/rfr_init2.png' width=500></td></tr>
+</table>
+<br>
+<h2>Hyperparameter Tuning</h2>
+As seen in the graphs above, the prediction lined for Random Forest Regressors are mostly flat lines with a few sparse peaks. While on the contrary, Multi-level Perceptron Regressor shows way better results. Thus only Multi-level Perceptron Regressor underwent hyperparameter tuning.
+<strong>Grid Search Cross Validation</strong> is used to fine tune the regression model.
