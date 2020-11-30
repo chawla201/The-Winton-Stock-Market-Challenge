@@ -24,7 +24,7 @@ Each row in the dataset is an arbitrary stock at an arbitrary 5 day time window.
 </p>
 <br>
 
-## Tecnologies Used
+## Technologies Used
     
 * <strong>Python</strong>
 * <strong>Pandas</strong>
