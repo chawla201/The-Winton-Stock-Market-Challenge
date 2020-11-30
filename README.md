@@ -78,3 +78,10 @@ As seen in the graphs above, the prediction lined for Random Forest Regressors a
 The best model obtained after hyper parameter tuning is: <br>
 <img src="https://github.com/chawla201/The-Winton-Stock-Market-Challenge/blob/master/images/best_estimator.jpg" width=600>
 
+<h2>Model Evaluation</h2>
+Mean Absolute Error (MAE) is used the performance metric for evaluating the regression model. MAE is easy to interpret and provides a clear view of the performance of the model.
+<p align='center'>
+  <img src="https://github.com/chawla201/The-Winton-Stock-Market-Challenge/blob/master/images/mae.png" width=400>
+ </p>
+ The Mean Absolute Error of the model = <strong>0.01366</strong>
+ 
