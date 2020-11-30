@@ -72,7 +72,7 @@ Since the problem statement dictates us to predict multiple values, MultiOutputR
   <tr><td><img src='https://github.com/chawla201/The-Winton-Stock-Market-Challenge/blob/master/images/mlp_intit2.png' width=500></td><td><img src='https://github.com/chawla201/The-Winton-Stock-Market-Challenge/blob/master/images/rfr_init2.png' width=500></td></tr>
 </table>
 <br>
-## Hyperparameter Tuning
+<h2>Hyperparameter Tuning</h2>
 As seen in the graphs above, the prediction lined for Random Forest Regressors are mostly flat lines with a few sparse peaks. While on the contrary, Multi-level Perceptron Regressor shows way better results. Thus only Multi-level Perceptron Regressor underwent hyperparameter tuning.
 <strong>Grid Search Cross Validation</strong> method is used to fine tune the regression model.
 The best model obtained after hyper parameter tuning is: <br>
