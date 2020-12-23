@@ -7,6 +7,12 @@ The main task of this competition was predict the interday and intraday return o
 __NOTE:__<br>
 To view the final code with the interactive graphs, [click here](https://nbviewer.jupyter.org/github/chawla201/The-Winton-Stock-Market-Challenge/blob/master/Final%20code.ipynb) 
 
+## tl;dr
+- Developed a data pre-processing pipeline
+- Tuned and Trained a Multi-Output Multi-Layer Perceptron Regression
+Model to predict stock returns based on returns from past two days
+and a set of features
+
 
 ## Data
 
